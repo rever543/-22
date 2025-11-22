@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог языков программирования</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Каталог языков программирования</h1>
+    
+    <div class="a1">
+        <h2>Все языки программирования</h2>
+        
+        <div class="a2" data-name="Python" onclick="showGuide('Python')">
+            <div class="a4">Python</div>
+            <div class="a5">Простой и понятный язык для начинающих. Используется для веб-разработки, анализа данных и машинного обучения.</div>
+            <button class="a6" onclick="event.stopPropagation(); addToFavorites('Python', 'Простой и понятный язык для начинающих. Используется для веб-разработки, анализа данных и машинного обучения.')">Добавить в избранное</button>
+        </div>
+        
+        <div class="a2" data-name="JavaScript" onclick="showGuide('JavaScript')">
+            <div class="a4">JavaScript</div>
+            <div class="a5">Язык для создания интерактивных веб-сайтов. Работает в браузере и на сервере (Node.js).</div>
+            <button class="a6" onclick="event.stopPropagation(); addToFavorites('JavaScript', 'Язык для создания интерактивных веб-сайтов. Работает в браузере и на сервере (Node.js).')">Добавить в избранное</button>
+        </div>
+        
+        <div class="a2" data-name="Java" onclick="showGuide('Java')">
+            <div class="a4">Java</div>
+            <div class="a5">Мощный объектно-ориентированный язык. Используется для создания приложений, игр и корпоративного ПО.</div>
+            <button class="a6" onclick="event.stopPropagation(); addToFavorites('Java', 'Мощный объектно-ориентированный язык. Используется для создания приложений, игр и корпоративного ПО.')">Добавить в избранное</button>
+        </div>
+        
+        <div class="a2" data-name="C++" onclick="showGuide('C++')">
+            <div class="a4">C++</div>
+            <div class="a5">Быстрый язык для системного программирования, игр и приложений, требующих высокой производительности.</div>
+            <button class="a6" onclick="event.stopPropagation(); addToFavorites('C++', 'Быстрый язык для системного программирования, игр и приложений, требующих высокой производительности.')">Добавить в избранное</button>
+        </div>
+        
+        <div class="a2" data-name="C#" onclick="showGuide('C#')">
+            <div class="a4">C#</div>
+            <div class="a5">Язык от Microsoft для разработки Windows-приложений, игр на Unity и веб-приложений.</div>
+            <button class="a6" 
+                    onclick="event.stopPropagation(); 
+                             addToFavorites('C#', 'Язык от Microsoft для разработки Windows-приложений, игр на Unity и веб-приложений.')">
+                Добавить в избранное
+            </button>
+        </div>
+        
+        <div class="a2" data-name="PHP" onclick="showGuide('PHP')">
+            <div class="a4">PHP</div>
+            <div class="a5">Популярный язык для создания веб-сайтов и веб-приложений. Работает на стороне сервера.</div>
+            <button class="a6" 
+                    onclick="event.stopPropagation(); 
+                             addToFavorites('PHP', 'Популярный язык для создания веб-сайтов и веб-приложений. Работает на стороне сервера.')">
+                Добавить в избранное
+            </button>
+        </div>
+        
+        <div class="a2" data-name="Ruby" onclick="showGuide('Ruby')">
+            <div class="a4">Ruby</div>
+            <div class="a5">Элегантный и простой язык. Часто используется с фреймворком Ruby on Rails для веб-разработки.</div>
+            <button class="a6" 
+                    onclick="event.stopPropagation(); 
+                             addToFavorites('Ruby', 'Элегантный и простой язык. Часто используется с фреймворком Ruby on Rails для веб-разработки.')">
+                Добавить в избранное
+            </button>
+        </div>
+        
+        <div class="a2" data-name="Go" onclick="showGuide('Go')">
+            <div class="a4">Go</div>
+            <div class="a5">Современный язык от Google. Быстрый и эффективный, подходит для создания серверных приложений.</div>
+            <button class="a6" 
+                    onclick="event.stopPropagation(); 
+                             addToFavorites('Go', 'Современный язык от Google. Быстрый и эффективный, подходит для создания серверных приложений.')">
+                Добавить в избранное
+            </button>
+        </div>
+    </div>
+    
+    <div class="a1">
+        <h2> Избранные языки для изучения</h2>
+        <div id="favorites-list"></div>
+    </div>
+    
+    <div id="modal" class="a8">
+        <div class="a9">
+            <span class="a10" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-guide"></div>
+            <div id="modal-links"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
